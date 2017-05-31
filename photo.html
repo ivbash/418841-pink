@@ -35,7 +35,9 @@
       <section class="user-posts user-posts--panorama">
         <blockquote class="user-posts__post-wrapper user-posts__post-wrapper--panorama">
           <div class="user-posts__img user-posts__img--panorama">
-            <img src="#" alt="Фото">
+            <a href="#">
+              <img src="#" alt="Фото">
+            </a>
           </div>
           <div class="user-posts__text-wrapper user-posts__text-wrapper--panorama">
             <cite class="user-posts__user-name">Анна</cite>
@@ -51,7 +53,9 @@
       <section class="user-posts">
         <blockquote class="user-posts__post-wrapper">
           <div class="user-posts__img">
-            <img src="#" alt="Фото">
+            <a href="#">
+              <img src="#" alt="Фото">
+            </a>
           </div>
           <div class="user-posts__text-wrapper">
             <cite class="user-posts__user-name">Левон</cite>
@@ -65,7 +69,9 @@
         </blockquote>
         <blockquote class="user-posts__post-wrapper">
           <div class="user-posts__img">
-            <img src="#" alt="Фото">
+            <a href="#">
+              <img src="#" alt="Фото">
+            </a>
           </div>
           <div class="user-posts__text-wrapper">
             <cite class="user-posts__user-name">Антон</cite>
@@ -79,7 +85,9 @@
         </blockquote>
         <blockquote class="user-posts__post-wrapper">
           <div class="user-posts__img">
-            <img src="#" alt="Фото">
+            <a href="#">
+              <img src="#" alt="Фото">
+            </a>
           </div>
           <div class="user-posts__text-wrapper">
             <cite class="user-posts__user-name">Борис</cite>
@@ -93,7 +101,9 @@
         </blockquote>
         <blockquote class="user-posts__post-wrapper">
           <div class="user-posts__img">
-            <img src="#" alt="Фото">
+            <a href="#">
+              <img src="#" alt="Фото">
+            </a>
           </div>
           <div class="user-posts__text-wrapper">
             <cite class="user-posts__user-name">Сергей</cite>
@@ -107,7 +117,9 @@
         </blockquote>
         <blockquote class="user-posts__post-wrapper">
           <div class="user-posts__img">
-            <img src="#" alt="Фото">
+            <a href="#">
+              <img src="#" alt="Фото">
+            </a>
           </div>
           <div class="user-posts__text-wrapper">
             <cite class="user-posts__user-name">Максим</cite>
@@ -121,7 +133,9 @@
         </blockquote>
         <blockquote class="user-posts__post-wrapper">
           <div class="user-posts__img">
-            <img src="#" alt="Фото">
+            <a href="#">
+              <img src="#" alt="Фото">
+            </a>
           </div>
           <div class="user-posts__text-wrapper">
             <cite class="user-posts__user-name">Надежда</cite>
@@ -135,6 +149,23 @@
         </blockquote>
       </section>
       <p class="main-content__text">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+      <form class="img-processing" action="#" method="post">
+        <fieldset class="img-processing__img">
+          <img src="#" alt="Изображение">
+        </fieldset>
+        <fieldset class="img-processing__filter">
+          <label for="crop">Обрезка</label>
+          <input id="crop" type="range" name="crop">
+          <label for="fill">Заливка</label>
+          <input id="fill" type="range" name="fill">
+          <label for="contrast">Контрастность</label>
+          <input id="contrast" type="range" name="contrast">
+        </fieldset>
+        <fieldset class="img-processing__buttons">
+          <button class="img-processing__button btn btn--pink" type="submit">Запостить</button>
+          <button class="img-processing__button btn btn--disable" type="reset">Отмена</button>
+        </fieldset>
+      </form>
     </main>
     <footer class="page-footer">
       <div class="page-footer__logo">
