@@ -1,0 +1,59 @@
+.promo {
+  position: relative;
+  padding-top: 398px;
+  background-color: #1d2631;
+  background-clip: content-box;
+  color: #fff;
+
+  p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+}
+
+.promo__wrapper {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 55px;
+    width: 258px;
+    height: 286px;
+    background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
+  }
+}
+
+.promo__market-list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.promo__text {
+  display: none;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: normal;
+}
+
+@media @desktop-widths {
+  .promo {
+    display: flex;
+    background-color: transparent;
+  }
+
+  .promo__wrapper {
+    margin: 0;
+  }
+
+  .promo__text {
+    display: block;
+  }
+}
