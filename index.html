@@ -8,45 +8,51 @@
   </head>
   <body>
     <header class="page-header page-header--index">
-      <div class="page-header__logo">
-        <a>
-          <img src="#" alt="Pink">
-        </a>
+      <div class="page-header__wrapper">
+        <div class="page-header__inner">
+          <div class="page-header__logo">
+            <a>
+              <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Pink">
+            </a>
+          </div>
+          <nav class="main-nav">
+            <span class="main-nav__toggler">
+              <span></span>
+            </span>
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--active">
+                <a>Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="photo.html">Фотографии</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html">Конкурс</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-      <nav class="main-nav">
-        <span class="main-nav__toggler">
-          <span></span>
-        </span>
-        <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--active">
-            <a>Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="photo.html">Фотографии</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="form.html">Конкурс</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
       <div class="promo">
-        <b class="promo__text">Взгляните на жизнь иначе!</b>
-        <a class="promo__download btn btn--white" href="#" target="_blank">Скачать приложение</a>
-        <ul class="promo__market-list">
-          <li class="promo__market-item promo__market-item--apple">
-            <a href="#" target="_blank">iTunes</a>
-          </li>
-          <li class="promo__market-item promo__market-item--android">
-            <a href="#" target="_blank">Google Play</a>
-          </li>
-          <li class="promo__market-item promo__market-item--windows">
-            <a href="#" target="_blank">Windows Store</a>
-          </li>
-        </ul>
-        <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        <div class="promo__wrapper">
+          <b class="promo__text">Взгляните на жизнь иначе!</b>
+          <a class="promo__download btn btn--white" href="#" target="_blank">Скачать приложение</a>
+          <ul class="promo__market-list">
+            <li class="promo__market-item promo__market-item--apple">
+              <a href="#" target="_blank">iTunes</a>
+            </li>
+            <li class="promo__market-item promo__market-item--android">
+              <a href="#" target="_blank">Google Play</a>
+            </li>
+            <li class="promo__market-item promo__market-item--windows">
+              <a href="#" target="_blank">Windows Store</a>
+            </li>
+          </ul>
+          <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </div>
       </div>
     </header>
     <main class="main-content">
@@ -179,7 +185,7 @@
           </li>
         </ul>
         <div class="contacts__map">
-          <img src="#" alt="Карта">
+          <img src="img/bg-map-mobile@1x.png" width="320" height="421" alt="Карта">
         </div>
       </section>
     </main>
