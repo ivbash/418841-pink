@@ -1,11 +1,14 @@
 .promo {
-  position: relative;
-  padding-top: 398px;
+  padding-top: 464px;
+  padding-bottom: 30px;
   background-color: #1d2631;
   background-clip: content-box;
   color: #fff;
 
   p {
+    margin: 0;
+    margin-top: 23px;
+    padding: 0 20px;
     font-size: 14px;
     font-weight: 300;
     line-height: 24px;
@@ -13,7 +16,8 @@
 }
 
 .promo__wrapper {
-  width: 300px;
+  .container();
+  position: relative;
   margin: 0 auto;
   text-align: center;
 
@@ -21,39 +25,146 @@
     content: "";
     display: block;
     position: absolute;
-    top: 55px;
+    top: -287px;
     width: 258px;
     height: 286px;
     background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
   }
 }
 
+.promo__text {
+  display: none;
+  margin: 0;
+}
+
+.promo__download {
+  margin-top: 29px;
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
 .promo__market-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 0;
+  margin-top: 30px;
   padding: 0;
   list-style: none;
 }
 
-.promo__text {
-  display: none;
-  font-size: 40px;
-  font-weight: 300;
-  line-height: normal;
+.promo__market-item {
+  margin-right: 33px;
+
+  a {
+    display: block;
+    width: 47px;
+    height: 57px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &--apple {
+    a {
+      background: url("../img/logo-apple.svg") no-repeat bottom;
+    }
+  }
+
+  &--android {
+    a {
+      background: url("../img/logo-android.svg") no-repeat bottom;
+    }
+  }
+
+  &--windows {
+    margin-right: 0;
+
+    a {
+      background: url("../img/logo-microsoft.svg") no-repeat bottom;
+    }
+  }
 }
 
-@media @desktop-widths {
+@media @tablet-widths {
   .promo {
+    .container();
     display: flex;
+    position: relative;
+    padding-top: 202px;
+    padding-bottom: 111px;
     background-color: transparent;
+
+    p {
+      margin-top: 36px;
+      padding: 0;
+      font-size: 18px;
+    }
   }
 
   .promo__wrapper {
+    position: static;
+    width: 300px;
     margin: 0;
+
+    &::before {
+      top: auto;
+      right: 20px;
+      bottom: 0;
+      left: auto;
+      width: 258px;
+      height: 286px;
+      background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
+    }
   }
 
   .promo__text {
     display: block;
+    margin-bottom: 2px;
+    padding: 0 40px;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 48px;
+  }
+
+  .promo__download {
+    margin-bottom: 15px;
+    padding-left: 46px;
+    padding-right: 46px;
+  }
+}
+
+@media @desktop-widths {
+  .promo {
+    .container();
+    padding-top: 219px;
+    padding-bottom: 124px;
+
+    p {
+      margin-top: 55px;
+    }
+  }
+
+  .promo__wrapper {
+    &::before {
+      right: 25px;
+      width: 258px;
+      height: 286px;
+      background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
+    }
+  }
+
+  .promo__text {
+    margin-bottom: 28px;
+    padding: 0;
+    font-size: 50px;
+    line-height: 58px;
+  }
+
+  .promo__download {
+    margin-bottom: 35px;
+    padding: 13px 28px 16px;
+    font-size: 21px;
+    line-height: 21px;
   }
 }

@@ -8,31 +8,37 @@
   </head>
   <body>
     <header class="page-header page-header--inner">
-      <div class="page-header__logo">
-        <a href="index.html">
-          <img src="#" alt="Pink">
-        </a>
+      <div class="page-header__wrapper">
+        <div class="page-header__inner">
+          <div class="page-header__logo">
+            <a href="index.html">
+              <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Pink">
+            </a>
+          </div>
+          <nav class="main-nav">
+            <span class="main-nav__toggler">
+              <span></span>
+            </span>
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="photo.html">Фотографии</a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a>Конкурс</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-      <nav class="main-nav">
-        <span class="main-nav__toggler">
-          <span></span>
-        </span>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="photo.html">Фотографии</a>
-          </li>
-          <li class="main-nav__item main-nav__item--active">
-            <a>Конкурс</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
-      <h1 class="page-header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      <div class="page-header__bg-wrapper">
+        <h1 class="page-header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      </div>
     </header>
     <main class="main-content">
       <p class="main-content__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></p>
@@ -99,5 +105,6 @@
         <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
       </div>
     </footer>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
