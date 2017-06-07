@@ -1,0 +1,24 @@
+.slider__pagination {
+  display: flex;
+}
+
+.slider__pagination-item {
+  width: 6px;
+  height: 6px;
+  margin-right: 13px;
+  background-color: rgba(40, 54, 69, 0.3);
+  background-clip: content-box;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--active {
+    background-color: #fff;
+    border-color: #283645;
+    cursor: default;
+  }
+}
