@@ -16,30 +16,38 @@
 .page-header__bg-wrapper {
   position: relative;
   z-index: -1;
+  min-height: 240px;
   margin-top: @margin-header-mobile;
   background: #1d2631 url("../../img/bg-back-mobile@1x.jpg") no-repeat top;
 }
 
 .page-header__title {
   margin: 0;
-  padding-top: 100px;
+  padding-top: 98px;
   font-size: 24px;
   font-weight: 300;
-  line-height: normal;
+  line-height: 30px;
+  text-align: center;
 }
 
 @media @tablet-widths {
   .page-header__logo {
     margin-bottom: -110px;
-//    padding: 45px 20px 47px; /*?*/
     padding: 0;
-    
+
     /* dev */
     min-height: 110px;
   }
-  
+
   .page-header__bg-wrapper {
+    min-height: 439px;
     margin-top: -109px;
+  }
+
+  .page-header__title {
+    padding-top: 178px;
+    font-size: 50px;
+    line-height: 60px;
   }
 }
 
@@ -55,13 +63,19 @@
   }
 
   .page-header__inner {
-    .container();
     display: flex;
     justify-content: space-between;
+    width: 940px;
+    margin: 0 auto;
   }
 
   .page-header__bg-wrapper {
+    min-height: 395px;
     margin-top: -110px;
     background: #1d2631 url("../../img/bg-back-mobile@1x.jpg") no-repeat top;
+  }
+
+  .page-header__title {
+    padding-top: 173px;
   }
 }
