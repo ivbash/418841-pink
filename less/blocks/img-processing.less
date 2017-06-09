@@ -1,3 +1,238 @@
 .img-processing {
   background-color: @bg-lightgray;
 }
+
+.img-processing__wrapper {
+  .container();
+}
+
+.img-processing__img {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  line-height: 0;
+}
+
+.img-processing__filter {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 22px 20px 80px;
+}
+
+.img-processing__option {
+  display: block;
+  width: 48px;
+  height: 44px;
+  margin-right: 34px;
+  font-size: 0;
+
+  &:nth-of-type(1) {
+    width: 44px;
+    background: url("../../img/icon-editor-crop.svg") no-repeat center;
+    background-size: 44px 44px;
+  }
+
+  &:nth-of-type(2) {
+    background: url("../../img/icon-editor-fill.svg") no-repeat center;
+    background-size: 48px 43px;
+  }
+
+  &:nth-of-type(3) {
+    margin-right: 0;
+    background: url("../../img/icon-editor-contrast.svg") no-repeat center;
+    background-size: 32px 32px;
+  }
+}
+
+.img-processing__option-range {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  width: 240px;
+  transform: translateX(-50%);
+
+  &--visible {
+    display: block;
+  }
+}
+
+.img-processing__buttons {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 20px 28px;
+}
+
+.img-processing__button {
+  margin-bottom: 13px;
+}
+
+@media @tablet-widths {
+  .img-processing {
+    .clearfix();
+    padding-top: 58px;
+    padding-bottom: 53px;
+  }
+
+  .img-processing__img {
+    display: block;
+    float: left;
+    width: 300px;
+    min-height: 400px;
+    padding: 0;
+    padding-right: 10px;
+
+    img {
+      width: 100%; /* временно */
+    }
+  }
+
+  .img-processing__filter {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    float: right;
+    width: 275px;
+    margin-bottom: 41px;
+    padding: 0;
+    padding-top: 9px;
+  }
+
+  .img-processing__option {
+    position: relative;
+    width: 24px;
+    height: 22px;
+    padding-bottom: 30px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    &:nth-of-type(1) {
+      width: 24px;
+      background-position: top;
+      background-size: 22px 22px;
+    }
+
+    &:nth-of-type(2) {
+      background-position: 3px 3px;
+      background-size: 24px 22px;
+    }
+
+    &:nth-of-type(3) {
+      background-position: 8px 2px;
+      background-size: 16px 16px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 4px;
+      width: 275px;
+      height: 1px;
+      background-color: #000;
+      opacity: 0.1;
+    }
+  }
+
+  .img-processing__option-range {
+    display: block;
+    position: static;
+    left: auto;
+    bottom: auto;
+    width: 202px;
+    margin-right: 17px;
+    transform: none;
+  }
+
+  .img-processing__buttons {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    width: 275px;
+    padding: 0;
+    padding-right: 15px;
+  }
+
+  .img-processing__button {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .img-processing {
+    width: 940px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    padding-top: 53px;
+    padding-left: 80px;
+    padding-right: 60px;
+  }
+
+  .img-processing__wrapper {
+    width: auto;
+    margin: 0;
+  }
+
+  .img-processing__img {
+    margin-top: 3px;
+  }
+
+  .img-processing__filter {
+    width: 410px;
+    margin-bottom: 133px;
+    padding-top: 0;
+  }
+
+  .img-processing__option {
+    width: 48px;
+    height: 44px;
+    padding-bottom: 20px;
+    margin-right: 20px;
+    margin-bottom: 8px;
+
+    &:nth-of-type(1) {
+      width: 48px;
+      background-position: 0 1px;
+      background-size: 44px 44px;
+    }
+
+    &:nth-of-type(2) {
+      background-position: 0 4px;
+      background-size: 48px 43px;
+    }
+
+    &:nth-of-type(3) {
+      background-position: 6px 6px;
+      background-size: 32px 32px;
+    }
+
+    &::before {
+      width: 410px;
+    }
+  }
+
+  .img-processing__option-range {
+    width: 288px;
+    margin-top: 14px;
+    margin-right: 29px;
+  }
+
+  .img-processing__buttons {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 410px;
+    padding: 0;
+  }
+
+  .img-processing__button {
+    width: 183px;
+    margin-bottom: 0;
+  }
+}
