@@ -1,0 +1,37 @@
+.container() {
+  width: 320px;
+  margin: 0 auto;
+
+  @media @tablet-widths {
+    width: 620px;
+  }
+
+  @media @desktop-widths {
+    width: 940px;
+  }
+}
+
+.text-hidden() {
+  padding: 0;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.input-text() {
+  padding: 15px 20px;
+  border: 2px solid #e5e5e5;
+  border-radius: 2px;
+}
+
+.bg-skew(@size: 100px, @deg: 176deg) {
+  background-image: linear-gradient(@deg, transparent, transparent @size, @bg-lightgray @size, @bg-lightgray);
+}
