@@ -53,12 +53,34 @@
     color: inherit;
     text-decoration: none;
     text-align: center;
+
+    &:hover {
+      color: @color-pink;
+    }
+
+    &:active {
+      color: @color-pink-opacity;
+    }
+  }
+
+  &--active {
+    a {
+      cursor: default;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &:active {
+        color: #fff;
+      }
+    }
   }
 }
 
 @media @tablet-widths {
   .main-nav__toggler {
-//    padding: 45px 20px 47px;
+    //    padding: 45px 20px 47px;
     padding: 44px 20px 43px; /* 109px */
   }
 }
@@ -89,6 +111,26 @@
       padding: 0;
       background-color: transparent;
       box-shadow: none;
+
+      &:active {
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    &--active {
+      a {
+        position: relative;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: -10px;
+          width: 100%;
+          height: 2px;
+          background-color: #fff;
+        }
+      }
     }
   }
 }
