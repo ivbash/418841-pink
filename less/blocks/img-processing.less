@@ -1,5 +1,6 @@
 .img-processing {
   background-color: @bg-lightgray;
+  overflow: hidden; /* IE11 */
 }
 
 .img-processing__wrapper {
@@ -91,10 +92,6 @@
     min-height: 400px;
     padding: 0;
     padding-right: 10px;
-
-    img {
-      width: 100%; /* временно */
-    }
   }
 
   .img-processing__filter {
