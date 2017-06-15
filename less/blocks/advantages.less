@@ -1,6 +1,9 @@
 .advantages {
-  .bg-skew(249px, 174deg); /* временно */
   padding-top: 39px;
+  background-image: url("../img/bg-triangle-white.svg"), linear-gradient(to bottom, transparent, transparent 218px, @bg-lightgray 218px, @bg-lightgray);
+  background-repeat: no-repeat;
+  background-position: 0 217px, 0 0;
+  background-size: 100% 32px, auto auto;
 }
 
 .advantages__wrapper {
@@ -82,8 +85,10 @@
 
 @media @tablet-widths {
   .advantages {
-    .bg-skew(290px, 176deg); /* временно */
     padding-top: 50px;
+    background-image: url("../img/bg-triangle-white.svg"), linear-gradient(to bottom, transparent, transparent 241px, @bg-lightgray 241px, @bg-lightgray);
+    background-position: 0 240px, 0 0;
+    background-size: 100% 50px, auto auto;
   }
 
   .advantages__text {
@@ -149,9 +154,23 @@
         left: 0;
         width: 238px;
         height: 276px;
-        background-image: url("../img/icon-timer.svg");
-        background-repeat: no-repeat;
-        background-size: 238px auto;
+        background-image: url("../img/icon-editor-diagram-fill.svg"), url("../img/icon-timer.svg");
+        background-repeat: no-repeat, no-repeat;
+        background-position: 18px 55px, 0 0;
+        background-size: 202px 202px, 238px auto;
+      }
+
+      &::after {
+        content: "24";
+        display: block;
+        position: absolute;
+        top: 67px;
+        left: 119px;
+        transform: translateX(-50%);
+        font-size: 96px;
+        font-weight: 700;
+        line-height: 96px;
+        color: @color-pink;
       }
     }
   }
@@ -189,8 +208,10 @@
 
 @media @desktop-widths {
   .advantages {
-    .bg-skew(420px, 176deg); /* временно */
     padding-top: 68px;
+    background-image: url("../img/bg-triangle-white.svg"), linear-gradient(to bottom, transparent, transparent 327px, @bg-lightgray 327px, @bg-lightgray);
+    background-position: 0 325px, 0 0;
+    background-size: 100% 92px, auto auto;
   }
 
   .advantages__text {
@@ -296,7 +317,15 @@
         left: 0;
         width: 298px;
         height: 345px;
-        background-size: 298px auto;
+        background-position: 23px 69px, 0 0;
+        background-size: 253px 253px, 298px auto;
+      }
+
+      &::after {
+        top: 36px;
+        left: 148px;
+        font-size: 120px;
+        line-height: 120px;
       }
     }
   }

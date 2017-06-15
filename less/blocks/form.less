@@ -64,7 +64,7 @@
 
     &:checked + label {
       &::before {
-        background-image: url("../img/icon-yes.svg");
+        background-image: url("../img/icon-yes-checkbox.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 22px 16px;
@@ -183,9 +183,31 @@
   flex-direction: column;
 }
 
+.form__tel-inner {
+  position: relative;
+  line-height: 0;
+
+  &::before {
+    .contact-icon();
+    background-image: url("../img/icon-phone.svg");
+    background-size: 20px 19px;
+  }
+}
+
 .form__email-wrapper {
   display: flex;
   flex-direction: column;
+}
+
+.form__email-inner {
+  position: relative;
+  line-height: 0;
+
+  &::before {
+    .contact-icon();
+    background-image: url("../img/icon-mail.svg");
+    background-size: 18px 13px;
+  }
 }
 
 .form__app-group {
@@ -413,8 +435,20 @@
     flex-direction: column-reverse;
   }
 
+  .form__tel-inner {
+    &::before {
+      display: block;
+    }
+  }
+
   .form__email-wrapper {
     flex-direction: column-reverse;
+  }
+
+  .form__email-inner {
+    &::before {
+      display: block;
+    }
   }
 
   .form__achievements-group {
@@ -496,8 +530,6 @@
   }
 
   .form__contacts-group {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 66px;
     padding-top: 41px;
 
@@ -508,6 +540,11 @@
     input {
       width: 375px;
     }
+  }
+
+  .form__contacts-wrapper {
+    display: flex;
+    justify-content: space-between;
   }
 
   .form__achievements-group {

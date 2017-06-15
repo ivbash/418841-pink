@@ -18,6 +18,18 @@
   overflow: hidden;
 }
 
+.reviews-button() {
+  .text-hidden();
+  display: block;
+  position: absolute;
+  top: 213px;
+  width: 25px;
+  height: 50px;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
 .clearfix() {
   &::after {
     content: "";
@@ -41,6 +53,17 @@
   }
 }
 
-.bg-skew(@size: 100px, @deg: 176deg) {
-  background-image: linear-gradient(@deg, transparent, transparent @size, @bg-lightgray @size, @bg-lightgray);
+.contact-icon() {
+  content: "";
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  background-color: #e5e5e5;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top-right-radius: 1px;
+  border-bottom-right-radius: 1px;
 }

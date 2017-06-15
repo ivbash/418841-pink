@@ -101,6 +101,19 @@
 
   .reviews__wrapper {
     position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 72px;
+      left: 50%;
+      width: 79px;
+      height: 63px;
+      background: url("../img/icon-quotes.svg") no-repeat;
+      background-size: 79px 63px;
+      transform: translateX(-50%);
+    }
   }
 
   .reviews__item {
@@ -129,31 +142,18 @@
     }
   }
 
-  .reviews-button() {
-    .text-hidden();
-    display: block;
-    position: absolute;
-    top: 210px;
-    width: 25px;
-    height: 50px;
-    margin: 0;
-    border: none;
-    cursor: pointer;
-
-    /* dev */
-    background-color: red;
-  }
-
   .reviews__prev {
     .reviews-button();
     left: 0;
-    background: ;
+    background: url("../img/icon-review-arrow-left.svg") no-repeat;
+    background-size: 22px 41px;
   }
 
   .reviews__next {
     .reviews-button();
     right: 0;
-    background: ;
+    background: url("../img/icon-review-arrow-right.svg") no-repeat;
+    background-size: 22px 41px;
   }
 
   .reviews__pagination {
