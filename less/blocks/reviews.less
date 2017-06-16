@@ -145,15 +145,45 @@
   .reviews__prev {
     .reviews-button();
     left: 0;
-    background: url("../img/icon-review-arrow-left.svg") no-repeat;
-    background-size: 22px 41px;
+
+    .reviews__prev-svg {
+      fill: #283645;
+      fill-opacity: 0.3;
+    }
+
+    &:hover {
+      .reviews__prev-svg {
+        fill-opacity: 0.6;
+      }
+    }
+
+    &:active {
+      .reviews__prev-svg {
+        fill-opacity: 0.1;
+      }
+    }
   }
 
   .reviews__next {
     .reviews-button();
     right: 0;
-    background: url("../img/icon-review-arrow-right.svg") no-repeat;
-    background-size: 22px 41px;
+
+    .reviews__next-svg {
+      fill: #283645;
+      fill-opacity: 0.3;
+    }
+
+    &:hover {
+      .reviews__next-svg {
+        fill-opacity: 0.6;
+      }
+    }
+
+    &:active {
+      .reviews__next-svg {
+        fill-opacity: 0.1;
+      }
+    }
   }
 
   .reviews__pagination {

@@ -29,22 +29,49 @@
   height: 44px;
   margin-right: 34px;
   font-size: 0;
+  opacity: 0.3;
 
   &:nth-of-type(1) {
     width: 44px;
-    background: url("../img/icon-editor-crop.svg") no-repeat center;
+    background-image: url("../img/icon-editor-crop.svg");
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: 44px 44px;
   }
 
   &:nth-of-type(2) {
-    background: url("../img/icon-editor-fill.svg") no-repeat center;
+    background-image: url("../img/icon-editor-fill.svg");
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: 48px 43px;
   }
 
   &:nth-of-type(3) {
     margin-right: 0;
-    background: url("../img/icon-editor-contrast.svg") no-repeat center;
+    background-image: url("../img/icon-editor-contrast.svg");
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: 32px 32px;
+  }
+
+  &--active {
+    opacity: 1;
+
+    &:nth-of-type(1) {
+      background-image: url("../img/icon-editor-crop-pink.svg");
+    }
+
+    &:nth-of-type(2) {
+      background-image: url("../img/icon-editor-fill-pink.svg");
+    }
+
+    &:nth-of-type(3) {
+      background-image: url("../img/icon-editor-contrast-pink.svg");
+    }
+  }
+
+  &:hover:not([class~="img-processing__option--active"]) {
+    opacity: 0.5;
   }
 }
 
@@ -112,19 +139,23 @@
     padding-bottom: 30px;
     margin-right: 20px;
     margin-bottom: 20px;
+    opacity: 1;
 
     &:nth-of-type(1) {
       width: 24px;
+      background-image: url("../img/icon-editor-crop-pink.svg");
       background-position: top;
       background-size: 22px 22px;
     }
 
     &:nth-of-type(2) {
+      background-image: url("../img/icon-editor-fill-pink.svg");
       background-position: 3px 3px;
       background-size: 24px 22px;
     }
 
     &:nth-of-type(3) {
+      background-image: url("../img/icon-editor-contrast-pink.svg");
       background-position: 8px 2px;
       background-size: 16px 16px;
     }
@@ -138,6 +169,10 @@
       height: 1px;
       background-color: #000;
       opacity: 0.1;
+    }
+
+    &:hover:not([class~="img-processing__option--active"]) {
+      opacity: 1;
     }
   }
 

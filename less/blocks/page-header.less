@@ -11,6 +11,46 @@
   padding: 22px 20px 26px;
   background-color: rgba(0, 0, 0, 0.3);
   line-height: 0;
+
+  svg {
+    margin-left: -70px;
+    margin-top: -19px;
+  }
+}
+
+.page-header__logo-svg:not([class~="page-header__logo-svg--index"]) {
+  &:hover {
+    .page-header__logo-name,
+    .page-header__logo-glasses,
+    .page-header__logo-glasses-crop {
+      fill: @color-pink;
+    }
+  }
+
+  &:active {
+    .page-header__logo-name,
+    .page-header__logo-glasses,
+    .page-header__logo-glasses-crop {
+      fill: #fff;
+      fill-opacity: 0.3;
+    }
+
+    .page-header__logo-star {
+      fill-opacity: 0.3;
+    }
+  }
+}
+
+.page-header__logo-glasses {
+  display: none;
+}
+
+.page-header__logo-glasses-crop {
+  display: none;
+}
+
+.page-header__logo-star {
+  display: none;
 }
 
 .page-header__bg-wrapper {
@@ -43,11 +83,18 @@
 
 @media @tablet-widths {
   .page-header__logo {
+    height: 40px;
     margin-bottom: -110px;
-    padding: 0;
+    padding: 26px 21px 44px;
 
-    /* dev */
-    min-height: 110px;
+    svg {
+      margin-left: 0;
+      margin-top: 0;
+    }
+  }
+
+  .page-header__logo-glasses {
+    display: block;
   }
 
   .page-header__bg-wrapper {
@@ -71,8 +118,21 @@
 @media @desktop-widths {
   .page-header__logo {
     margin-bottom: -110px;
+    padding: 26px 0 44px;
     background-color: transparent;
     box-shadow: none;
+  }
+
+  .page-header__logo-glasses {
+    display: none;
+  }
+
+  .page-header__logo-glasses-crop {
+    display: block;
+  }
+
+  .page-header__logo-star {
+    display: block;
   }
 
   .page-header__wrapper {
