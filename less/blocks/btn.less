@@ -16,16 +16,48 @@
   &--white {
     border-color: #fff;
     color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      box-shadow: 0 5px 7px rgba(0, 0, 0, 0.75);
+      color: @color-pink;
+    }
+
+    &:active {
+      background-color: #fff;
+      box-shadow: none;
+      color: @color-pink-opacity;
+    }
   }
 
   &--pink {
     border-color: @color-pink;
     color: @color-pink;
+
+    &:hover {
+      background-color: @color-pink;
+      color: #fff;
+    }
+
+    &:active {
+      background-color: @color-pink;
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   &--disable {
     border-color: @color-darkblue;
     color: @color-darkblue;
     opacity: 0.1;
+
+    &:hover {
+      opacity: 0.3;
+    }
+
+    &:active {
+      background-color: @color-darkblue;
+      color: rgba(255, 255, 255, 0.3);
+      opacity: 0.3;
+    }
   }
 }

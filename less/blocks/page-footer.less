@@ -20,6 +20,35 @@
   line-height: 0;
 }
 
+.page-footer__logo-svg:not([class~="page-footer__logo-svg--index"]) {
+  &:hover {
+    .page-footer__logo-name {
+      fill: @color-pink;
+    }
+  }
+
+  &:active {
+    .page-footer__logo-star,
+    .page-footer__logo-glasses,
+    .page-footer__logo-glasses-crop {
+      fill-opacity: 0.3;
+    }
+
+    .page-footer__logo-name {
+      fill: @color-darkblue;
+      fill-opacity: 0.3;
+    }
+  }
+}
+
+.page-footer__logo-glasses-crop {
+  display: none;
+}
+
+.page-footer__logo-star {
+  display: none;
+}
+
 .page-footer__copyright {
   span {
     margin-right: 11px;
@@ -36,8 +65,18 @@
   vertical-align: middle;
   width: 27px;
   height: 34px;
-  background: url("../img/logo-htmlacademy.svg") no-repeat;
+  background-image: url("../img/logo-htmlacademy.svg");
+  background-repeat: no-repeat;
   background-size: 27px 34px;
+
+  &:hover {
+    background-image: url("../img/logo-htmlacademy-darkblue.svg");
+  }
+
+  &:active {
+    background-image: url("../img/logo-htmlacademy-darkblue.svg");
+    opacity: 0.3;
+  }
 }
 
 @media @tablet-widths {
@@ -76,6 +115,18 @@
 
   .page-footer__logo {
     width: 200px;
+  }
+
+  .page-footer__logo-glasses {
+    display: none;
+  }
+
+  .page-footer__logo-glasses-crop {
+    display: block;
+  }
+
+  .page-footer__logo-star {
+    display: block;
   }
 
   .page-footer__copyright {

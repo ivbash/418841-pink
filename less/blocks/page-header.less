@@ -11,6 +11,46 @@
   padding: 22px 20px 26px;
   background-color: rgba(0, 0, 0, 0.3);
   line-height: 0;
+
+  svg {
+    margin-left: -70px;
+    margin-top: -19px;
+  }
+}
+
+.page-header__logo-svg:not([class~="page-header__logo-svg--index"]) {
+  &:hover {
+    .page-header__logo-name,
+    .page-header__logo-glasses,
+    .page-header__logo-glasses-crop {
+      fill: @color-pink;
+    }
+  }
+
+  &:active {
+    .page-header__logo-name,
+    .page-header__logo-glasses,
+    .page-header__logo-glasses-crop {
+      fill: #fff;
+      fill-opacity: 0.3;
+    }
+
+    .page-header__logo-star {
+      fill-opacity: 0.3;
+    }
+  }
+}
+
+.page-header__logo-glasses {
+  display: none;
+}
+
+.page-header__logo-glasses-crop {
+  display: none;
+}
+
+.page-header__logo-star {
+  display: none;
 }
 
 .page-header__bg-wrapper {
@@ -18,7 +58,15 @@
   z-index: -1;
   min-height: 240px;
   margin-top: @margin-header-mobile;
-  background: #1d2631 url("../../img/bg-back-mobile@1x.jpg") no-repeat top;
+  background-color: #1d2631;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 700px auto;
+
+  @media @retina {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
 }
 
 .page-header__title {
@@ -35,16 +83,29 @@
 
 @media @tablet-widths {
   .page-header__logo {
+    height: 40px;
     margin-bottom: -110px;
-    padding: 0;
+    padding: 26px 21px 44px;
 
-    /* dev */
-    min-height: 110px;
+    svg {
+      margin-left: 0;
+      margin-top: 0;
+    }
+  }
+
+  .page-header__logo-glasses {
+    display: block;
   }
 
   .page-header__bg-wrapper {
     min-height: 439px;
     margin-top: -109px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: 1200px auto;
+
+    @media @retina {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
   }
 
   .page-header__title {
@@ -57,8 +118,21 @@
 @media @desktop-widths {
   .page-header__logo {
     margin-bottom: -110px;
+    padding: 26px 0 44px;
     background-color: transparent;
     box-shadow: none;
+  }
+
+  .page-header__logo-glasses {
+    display: none;
+  }
+
+  .page-header__logo-glasses-crop {
+    display: block;
+  }
+
+  .page-header__logo-star {
+    display: block;
   }
 
   .page-header__wrapper {
@@ -75,7 +149,12 @@
   .page-header__bg-wrapper {
     min-height: 395px;
     margin-top: -110px;
-    background: #1d2631 url("../../img/bg-back-mobile@1x.jpg") no-repeat top;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-size: 2560px auto;
+
+    @media @retina {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
   }
 
   .page-header__title {

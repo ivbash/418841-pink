@@ -16,9 +16,25 @@
     margin-right: 0;
   }
 
+  &:hover {
+    background-color: rgba(40, 54, 69, 0.6);
+  }
+
+  &:active {
+    background-color: rgba(40, 54, 69, 0.1);
+  }
+
   &--active {
     background-color: #fff;
     border-color: @color-darkblue;
     cursor: default;
+
+    &:hover {
+      background-color: #fff;
+    }
+
+    &:active {
+      background-color: #fff;
+    }
   }
 }
