@@ -60,22 +60,33 @@
 }
 
 .page-footer__copyright-link {
-  .text-hidden();
   display: inline-block;
   vertical-align: middle;
   width: 27px;
   height: 34px;
-  background-image: url("../img/logo-htmlacademy.svg");
-  background-repeat: no-repeat;
-  background-size: 27px 34px;
 
   &:hover {
-    background-image: url("../img/logo-htmlacademy-darkblue.svg");
+    .page-footer__copyright-link-svg {
+      fill: @color-darkblue;
+    }
   }
+}
+
+.page-footer__copyright-link-svg {
+  width: 27px;
+  height: 34px;
+  fill: @color-pink;
 
   &:active {
-    background-image: url("../img/logo-htmlacademy-darkblue.svg");
-    opacity: 0.3;
+    fill: @color-darkblue;
+    fill-opacity: 0.3;
+  }
+
+  use {
+    &:active {
+      fill: @color-darkblue;
+      fill-opacity: 0.3;
+    }
   }
 }
 
