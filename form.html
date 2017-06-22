@@ -78,12 +78,18 @@
       <p class="main-content__text main-content__text--page-form">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></p>
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="form__full-name-group">
-          <label for="second-name">Фамилия:</label>
-          <input type="text" id="second-name" name="second-name" placeholder="Укажите фамилию *" required>
-          <label for="first-name">Имя:</label>
-          <input type="text" id="first-name" name="first-name" placeholder="Введите ваше имя *" required>
-          <label for="middle-name">Отчество:</label>
-          <input type="text" id="middle-name" name="middle-name" placeholder="Ну и отчество тоже">
+          <div class="form__name-wrapper">
+            <label for="second-name">Фамилия:</label>
+            <input type="text" id="second-name" name="second-name" placeholder="Укажите фамилию *" required>
+          </div>
+          <div class="form__name-wrapper">
+            <label for="first-name">Имя:</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Введите ваше имя *" required>
+          </div>
+          <div class="form__name-wrapper">
+            <label for="middle-name">Отчество:</label>
+            <input type="text" id="middle-name" name="middle-name" placeholder="Ну и отчество тоже">
+          </div>
         </div>
         <div class="form__achievements-group">
           <h2 class="form__group-title">Ваши безбашенные достижения в путешествии</h2>
