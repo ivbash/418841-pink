@@ -53,10 +53,6 @@
       background-repeat: no-repeat;
       background-size: 157px auto;
       transform: translateX(-50%);
-
-      @media @retina {
-        background-image: url("../img/iphone-screen-mobile@2x.png");
-      }
     }
   }
 }
@@ -81,6 +77,18 @@
 
 .advantages__research {
   display: none;
+}
+
+@media @mobile-widths {
+  .advantages__item {
+    &:nth-child(3) {
+      &::before {
+        @media @retina {
+          background-image: url("../img/iphone-screen-mobile@2x.png");
+        }
+      }
+    }
+  }
 }
 
 @media @tablet-widths {

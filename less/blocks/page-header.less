@@ -63,10 +63,6 @@
   background-repeat: no-repeat;
   background-position: top;
   background-size: 700px auto;
-
-  @media @retina {
-    background-image: url("../img/bg-back-mobile@2x.jpg");
-  }
 }
 
 .page-header__title {
@@ -79,6 +75,14 @@
   font-weight: 300;
   line-height: 30px;
   text-align: center;
+}
+
+@media @mobile-widths {
+  .page-header__bg-wrapper {
+    @media @retina {
+      background-image: url("../img/bg-back-mobile@2x.jpg");
+    }
+  }
 }
 
 @media @tablet-widths {

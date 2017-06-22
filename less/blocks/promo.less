@@ -31,10 +31,6 @@
     background-image: url("../img/iphone-hand-mobile@1x.png");
     background-repeat: no-repeat;
     background-size: 258px auto;
-
-    @media @retina {
-      background-image: url("../img/iphone-hand-mobile@2x.png");
-    }
   }
 }
 
@@ -89,6 +85,16 @@
     a {
       background: url("../img/logo-microsoft.svg") no-repeat bottom;
       background-size: 44px auto;
+    }
+  }
+}
+
+@media @mobile-widths {
+  .promo__wrapper {
+    &::before {
+      @media @retina {
+        background-image: url("../img/iphone-hand-mobile@2x.png");
+      }
     }
   }
 }
